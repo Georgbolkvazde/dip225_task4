@@ -13,3 +13,4 @@ with open("people.csv", "r") as file:
 url = "https://emn178.github.io/online-tools/crc32.html"
 driver.get(url)
 time.sleep(2)
+memoryview
