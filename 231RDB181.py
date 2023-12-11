@@ -3,7 +3,7 @@ option = webdriver.ChromeOptions()
 driver = webdriver.Chrome(service=service, options=option)
 
 name=[]
-# program read information from people.csv file and put all data in name list.
+# program reafd information from people.csv file and put all data in name list.
 with open("people.csv", "r") as file:
     next(file)
     for line in file:
