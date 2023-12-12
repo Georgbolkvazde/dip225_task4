@@ -1,22 +1,13 @@
-import selenium
-from selenium import webdriver
-from selenium.webdriver.chrome.service import Service
-from selenium.webdriver.common.by import By
-import time
-from openpyxl import Workbook, load_workbook 
+# ... (jūsu esošais kods)
 
-service = Service()
-option = webdriver.ChromeOptions()
-driver = webdriver.Chrome(service=service, options=option)
-
-name=[]
-# program read information from people.csv file and put all data in name list.
-with open("people.csv", "r") as file:
-    next(file)
-    for line in file:
-        row=line.rstrip().split(",") 
-        name.append(row)
-
-url = "https://emn178.github.io/online-tools/crc32.html"
-driver.get(url)
-time.sleep(2)
+# Pārbaudīsim un izlabosim jūsu kodu, kas lasa un apstrādā informāciju par algu
+with open('salary.xlsx', 'r', encoding='utf-8') as file:
+    reader = csv.reader(file)
+    next(reader)  # Пропустить заголовок
+    for row in reader:
+        encoded_name = row[0]
+        salary = row[1]
+        if encoded_name in encoded_names:
+            decoded_name = people[encoded_names.index(encoded_name)]
+            if decoded_name == 'Jo Rivers':
+                print(f'Jo Rivers kopējā alga: {salary} eur')
